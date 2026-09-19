@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #FFFFFF;
+  --bg-subtle: #F6F8FB;
+  --surface: #FFFFFF;
+  --border: #E4E9F0;
+  --border-strong: #CBD5E1;
+  --text: #0B1220;
+  --text-body: #24303F;
+  --text-muted: #5B6779;
+  --text-faint: #8494A8;
+  --brand: #0E63C4;
+  --brand-hover: #0A4E9E;
+  --brand-soft: #EBF3FD;
+  --brand-ink: #0A3F73;
+  --yea: #0E63C4;
+  --yea-bg: #EBF3FD;
+  --nay: #B42318;
+  --nay-bg: #FEF2F2;
+  --present: #8A6100;
+  --present-bg: #FFFBEB;
+  --notvoting: #5B6473;
+  --notvoting-bg: #F8FAFC;
+  --deadline: #B54708;
+  --deadline-bg: #FFF7ED;
+  --live: #0BA360;
+  --font-ui: 'Inter', system-ui, sans-serif;
+  --font-display: 'Manrope', 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-mono);
+}

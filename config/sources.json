@@ -1,0 +1,72 @@
+[
+  {
+    "id": "congress_gov",
+    "name": "Congress.gov (Library of Congress API v3)",
+    "url": "https://api.congress.gov",
+    "type": "api",
+    "tier": 1,
+    "cadence": "15 min",
+    "bias_note": "Definitive legislative record of authority for bills, committee referrals, and public laws.",
+    "enabled": true
+  },
+  {
+    "id": "govinfo",
+    "name": "GPO GovInfo (Bill Text & Enrolled Acts)",
+    "url": "https://api.govinfo.gov",
+    "type": "api",
+    "tier": 1,
+    "cadence": "30 min",
+    "bias_note": "Official federal publication office for authenticated bill text and Congressional Record.",
+    "enabled": true
+  },
+  {
+    "id": "house_clerk",
+    "name": "Office of the Clerk of the US House (Roll Calls)",
+    "url": "https://clerk.house.gov",
+    "type": "xml",
+    "tier": 1,
+    "cadence": "15 min",
+    "bias_note": "Official record for all recorded House floor votes, tallies, and member positions.",
+    "enabled": true
+  },
+  {
+    "id": "senate_lis",
+    "name": "US Senate Legislative Information System (Roll Calls)",
+    "url": "https://www.senate.gov",
+    "type": "xml",
+    "tier": 1,
+    "cadence": "15 min",
+    "bias_note": "Official roll-call voting record for the United States Senate.",
+    "enabled": true
+  },
+  {
+    "id": "fec",
+    "name": "Federal Election Commission (OpenFEC API)",
+    "url": "https://api.open.fec.gov",
+    "type": "api",
+    "tier": 1,
+    "cadence": "Hourly",
+    "bias_note": "Statutory disclosure filings as filed by candidate committees and independent expenditure PACs.",
+    "enabled": true
+  },
+  {
+    "id": "senate_lda",
+    "name": "Senate Lobbying Disclosure Act (LDA) Database",
+    "url": "https://lda.senate.gov",
+    "type": "api",
+    "tier": 1,
+    "cadence": "Daily",
+    "bias_note": "Quarterly lobbying registrations and client income disclosures.",
+    "enabled": true
+  },
+  {
+    "id": "cbo",
+    "name": "Congressional Budget Office (Cost Estimates)",
+    "url": "https://www.cbo.gov",
+    "type": "rss",
+    "tier": 1,
+    "cadence": "Daily",
+    "bias_note": "Non-partisan official scorekeeper for fiscal legislation and budgetary baselines.",
+    "enabled": true
+  }
+]
