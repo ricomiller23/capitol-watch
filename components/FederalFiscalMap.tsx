@@ -25,7 +25,7 @@ export const FEDERAL_JURISDICTIONS: FederalJurisdiction[] = [
     name: 'Washington D.C. (U.S. Capitol & Treasury)',
     state: 'DC',
     stateName: 'District of Columbia',
-    x: 787.0,
+    x: 815.0,
     y: 255.0,
     appropriationType: 'Federal Discretionary Base Budget',
     annualFundingBillionUsd: 1720,
@@ -39,8 +39,8 @@ export const FEDERAL_JURISDICTIONS: FederalJurisdiction[] = [
     name: 'Virginia (DoD & Defense Contracting Corridor)',
     state: 'VA',
     stateName: 'Virginia',
-    x: 770.0,
-    y: 275.0,
+    x: 740.0,
+    y: 290.0,
     appropriationType: 'Defense Title III Procurement & RDT&E',
     annualFundingBillionUsd: 74.2,
     keyFacilities: 'The Pentagon, Norfolk Naval Station, Langley AFB',
@@ -53,8 +53,8 @@ export const FEDERAL_JURISDICTIONS: FederalJurisdiction[] = [
     name: 'California (Aerospace & Naval Command)',
     state: 'CA',
     stateName: 'California',
-    x: 100.0,
-    y: 325.0,
+    x: 85.0,
+    y: 305.0,
     appropriationType: 'Defense & NASA Civil Space Procurement',
     annualFundingBillionUsd: 68.5,
     keyFacilities: 'Space Systems Command LA, Naval Base San Diego, Edwards AFB',
@@ -68,7 +68,7 @@ export const FEDERAL_JURISDICTIONS: FederalJurisdiction[] = [
     state: 'TX',
     stateName: 'Texas',
     x: 420.0,
-    y: 440.0,
+    y: 430.0,
     appropriationType: 'Military Construction & DHS Border Funds',
     annualFundingBillionUsd: 56.8,
     keyFacilities: 'Fort Cavazos, Joint Base San Antonio, Corpus Christi Army Depot',
@@ -82,7 +82,7 @@ export const FEDERAL_JURISDICTIONS: FederalJurisdiction[] = [
     state: 'FL',
     stateName: 'Florida',
     x: 760.0,
-    y: 470.0,
+    y: 480.0,
     appropriationType: 'DoD Operations & Space Exploration',
     annualFundingBillionUsd: 39.4,
     keyFacilities: 'USCENTCOM MacDill AFB, Cape Canaveral Space Force Station',
@@ -91,12 +91,40 @@ export const FEDERAL_JURISDICTIONS: FederalJurisdiction[] = [
     officialGazetteUrl: 'https://www.usaspending.gov'
   },
   {
+    id: 'al-space',
+    name: 'Alabama (Redstone Arsenal & Space Flight)',
+    state: 'AL',
+    stateName: 'Alabama',
+    x: 628.0,
+    y: 395.0,
+    appropriationType: 'Army Aviation & NASA Marshall Space Flight',
+    annualFundingBillionUsd: 18.6,
+    keyFacilities: 'Redstone Arsenal, NASA Marshall Space Flight Center, PEO Missiles and Space',
+    clotureStatus: 'Army Modernization Direct Flow',
+    fiscalDeadline: '2026-09-30 (FY2026 End)',
+    officialGazetteUrl: 'https://www.army.mil'
+  },
+  {
+    id: 'md-intel',
+    name: 'Maryland (Cyber Command & Health R&D)',
+    state: 'MD',
+    stateName: 'Maryland',
+    x: 825.0,
+    y: 220.0,
+    appropriationType: 'Defense Intelligence & NIH Discretionary',
+    annualFundingBillionUsd: 48.2,
+    keyFacilities: 'Fort Meade (NSA / USCYBERCOM), NIH Bethesda, Goddard Space Flight Center',
+    clotureStatus: 'HHS-Labor Passed / Defense Flow Active',
+    fiscalDeadline: '2026-12-11 (CR Funding Expiry)',
+    officialGazetteUrl: 'https://www.nih.gov'
+  },
+  {
     id: 'wa-naval',
     name: 'Washington (Pacific Submarine Fleet & Boeing Defense)',
     state: 'WA',
     stateName: 'Washington',
-    x: 75.0,
-    y: 55.0,
+    x: 70.0,
+    y: 65.0,
     appropriationType: 'Naval Sea Systems Command (NAVSEA)',
     annualFundingBillionUsd: 24.8,
     keyFacilities: 'Naval Base Kitsap (Trident SSBN Fleet), Puget Sound Naval Shipyard',
@@ -111,11 +139,12 @@ export function FederalFiscalMap() {
 
   // Highlight key appropriation states
   const highlightStates: Record<string, { fill?: string; stroke?: string; strokeWidth?: number }> = {
-    'Virginia': { fill: '#E0EDFF', stroke: '#0E63C4', strokeWidth: 1.4 },
-    'Maryland': { fill: '#E0EDFF', stroke: '#0E63C4', strokeWidth: 1.4 },
+    'Virginia': { fill: '#E0EDFF', stroke: '#0E63C4', strokeWidth: 1.2 },
+    'Maryland': { fill: '#E0EDFF', stroke: '#0E63C4', strokeWidth: 1.2 },
     'California': { fill: '#E0EDFF', stroke: '#0E63C4', strokeWidth: 1.2 },
     'Texas': { fill: '#E0EDFF', stroke: '#0E63C4', strokeWidth: 1.2 },
     'Florida': { fill: '#E0EDFF', stroke: '#0E63C4', strokeWidth: 1.2 },
+    'Alabama': { fill: '#E0EDFF', stroke: '#0E63C4', strokeWidth: 1.2 },
     'Washington': { fill: '#E0EDFF', stroke: '#0E63C4', strokeWidth: 1.2 },
   };
 
@@ -212,7 +241,7 @@ export function FederalFiscalMap() {
                     strokeWidth={isSelected ? 2.5 : 2}
                   />
 
-                  {/* Center Dot / Dollar Icon */}
+                  {/* Center Dot */}
                   <circle
                     r={3}
                     fill={isSelected ? '#FFFFFF' : badgeColor}
