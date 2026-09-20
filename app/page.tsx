@@ -1,3 +1,4 @@
+import { FederalFiscalMap } from "@/components/FederalFiscalMap";
 import React from 'react';
 import Link from 'next/link';
 import { SEED_BILLS, SEED_DEADLINES, SEED_VOTE, SEED_CONTEXT_POLL } from '@/lib/fallback-data';
@@ -38,6 +39,8 @@ export default function TodayOnTheHillPage() {
           </div>
         </div>
       </div>
+
+      <FederalFiscalMap />
 
       {/* Grid: Actions & Latest Vote (2 cols) + Context (1 col) */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
